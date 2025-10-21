@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="Generador de Frases" author="Victor Alcazar"/>
+  <title>Generador de Frases</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="title">💬 Generador de Frases</h1>
+    <p class="subtitle">Explora ideas breves al azar.</p>
+  </header>
+
+  <main class="machine" role="main">
+
+    <div class="screen" aria-live="polite">
+      <p class="phrase" id="current-phrase">Pulsa “Dime otra” para ver una nueva frase.</p>
+      <p class="author" id="current-author"></p>
+      <button type="button" id="copy-phrase" class="secondary-btn" aria-label="Copiar frase">📋 Copiar</button>
+    </div>
+
+    <div class="controls">
+      <div class="categories" role="group" aria-label="Categorías de frases">
+        <div class="category-row">
+          <button type="button" class="category-btn" data-category="motivacionales" aria-pressed="true">💪 Motivacionales</button>
+          <button type="button" class="category-btn" data-category="curiosidades" aria-pressed="false">🧠 Curiosidades</button>
+          <button type="button" class="category-btn" data-category="inspiradoras" aria-pressed="false">🌅 Inspiradoras</button>
+        </div>
+        <div class="category-row">
+          <button type="button" class="category-btn" data-category="sarcásticas" aria-pressed="false">😏 Sarcásticas</button>
+          <button type="button" class="category-btn" data-category="populares" aria-pressed="false">🎬 Populares</button>
+        </div>
+      </div>
+
+      <button type="button" id="new-phrase" class="main-btn">✨ Dime otra</button>
+      <button type="button" id="clear-history" class="secondary-btn">🗑️ Limpiar / Empezar de nuevo</button>
+    </div>
+
+    <section class="history" aria-label="Historial de frases">
+      <h2>📜 Historial de frases</h2>
+      <ul id="phrase-history"></ul>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
